@@ -6,7 +6,7 @@
     <title>Personal Portfolio Website</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+ <body>
 <div id="header">
     <div class="container">
         <nav>
@@ -46,13 +46,47 @@
                         <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
                         <li><span>Web Development</span><br>Web App Development</li>
                         <li><span>App Development</span><br>Building Android/iOS apps</li>
-                        <li><span>2024-2025</span><br>15-Month Immersion Program - The Hidden Genius Program</li>
+                    </ul>
+                </div>
+                <div class="tab-contents active-tab" id="experience">
+                    <ul>
+                        <li><span>2024-2025</span><br>Immersion Program - The Hidden Genius Project</li>
+                    </ul>
+                </div>
+                <div class="tab-contents active-tab" id="education">
+                    <ul>
+                        <li><span>2014-2020</span><br>Murphy Elementary School</li>
+                        <li><span>2021-2023</span><br>Betty Reid Soskin Middle School</li>
+                        <li><span>2023-2027</span><br>De Anza High School</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
 </div>
+<!-- ---------services---------------- -->
+ <div id="services">
+    <div class="container">
+        
+    </div>
+ </div>
 
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link")
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab")
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
 
 </body>
 </html>
